@@ -7,13 +7,16 @@ public class moveCamera : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // 鎖定滑鼠在螢幕中央並隱藏 
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))//z軸移動
+        transform.Translate(Vector3.forward * 速度 * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))//z軸移動
         {
             transform.Translate(Vector3.forward * 速度 * Time.deltaTime);
         }
@@ -21,11 +24,11 @@ public class moveCamera : MonoBehaviour
         {
             transform.Translate(Vector3.back * 速度 * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))//z軸移動
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * 速度 * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))//z軸移動
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector3.left * 速度 * Time.deltaTime);
         }
