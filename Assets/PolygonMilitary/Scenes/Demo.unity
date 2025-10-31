@@ -403658,8 +403658,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 723374275}
     - target: {fileID: 5489166073731605099, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
+      propertyPath: m_Height
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489166073731605099, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6982812146204527121, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
       propertyPath: m_Avatar
