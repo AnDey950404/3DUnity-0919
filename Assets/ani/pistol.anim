@@ -28073,7 +28073,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.73333335
-    functionName: endFiring
+    functionName: "\u767C\u5C04\u5B50\u5F48\u4E8B\u4EF6"
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
