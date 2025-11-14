@@ -119,7 +119,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pistol
+  m_Name: "\u767C\u5C04\u5B50\u5F48"
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -133,7 +133,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ee1a9b012d49d2b4b962a167143eb007, type: 2}
+  m_Motion: {fileID: 7468659754883861133, guid: 44bf9da22bbc7c046810f01e35ead1d6, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
