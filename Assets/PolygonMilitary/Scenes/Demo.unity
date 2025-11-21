@@ -108634,7 +108634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2119775930974504096, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4648838
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 2119775930974504096, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -210643,6 +210643,10 @@ PrefabInstance:
     - target: {fileID: 1469983544679450, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
       propertyPath: m_Name
       value: SM_Chr_Soldier_Female_01_Alt_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469983544679450, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1530213925800806, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
       propertyPath: m_IsActive
