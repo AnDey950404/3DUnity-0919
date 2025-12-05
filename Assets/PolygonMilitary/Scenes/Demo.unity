@@ -55474,6 +55474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297772102}
   - component: {fileID: 297772103}
+  - component: {fileID: 297772104}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -55510,6 +55511,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 30
   cycleTime: 3
+--- !u!114 &297772104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297772101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b93529fc3493e47b45dbde575cb5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "\u6700\u9577\u8DDD\u96E2": 5
+  "\u73A9\u5BB6": {fileID: 0}
+  "\u539F\u59CB\u7784\u6E96\u9EDE": {x: 0, y: 1.625, z: 1.825}
 --- !u!1001 &298118755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132542,11 +132558,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4784148460846928, guid: fc228600ef8465f44b1b58c0083a6e29, type: 3}
   m_PrefabInstance: {fileID: 723178565}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &723374275 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 490576248761790154, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
-  m_PrefabInstance: {fileID: 612650612}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &723790900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134223,15 +134234,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733418168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3b93529fc3493e47b45dbde575cb5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u6700\u8FD1\u7684\u6575\u4EBA": {fileID: 0}
-  "\u6575\u4EBA\u5EA7\u6A19": {x: 0, y: 0, z: 0}
-  "\u6700\u8FD1\u8DDD\u96E2": 0
-  "\u6700\u7D42\u76EE\u6A19": {fileID: 0}
+  "\u6700\u9577\u8DDD\u96E2": 5
+  "\u73A9\u5BB6": {fileID: 0}
+  "\u539F\u59CB\u7784\u6E96\u9EDE": {x: 0, y: 1.625, z: 1.825}
 --- !u!1001 &733563444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157575,7 +157585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c430f382484144e925c097c2d33cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 0.071
+  m_Weight: 0.626
   m_Data:
     m_ConstrainedObject: {fileID: 1018969722}
     m_SourceObjects:
@@ -210648,6 +210658,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1469983544679450, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1530213925800806, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -212254,7 +212268,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
     - target: {fileID: 95241920271805486, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
       propertyPath: m_WarningMessage
-      value: 
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Elbow_R'\n\tTransform 'Neck'\n\tTransform
+        'Head'\n\tTransform 'Spine_01'\n\tTransform 'Spine_02'\n\tTransform 'Hand_R'\n\tTransform
+        'Elbow_R'\n\tTransform 'Neck'\n\tTransform 'Head'\n\tTransform 'Spine_01'\n\tand
+        more ..."
       objectReference: {fileID: 0}
     - target: {fileID: 95241920271805486, guid: d8d4a1844fe82484ea3045e73b011a25, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -409515,10 +409534,14 @@ PrefabInstance:
       propertyPath: SprintSpeed
       value: 2.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4455410345225710272, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5437596750610235648, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
       propertyPath: "\u76EE\u6A19"
       value: 
-      objectReference: {fileID: 723374275}
+      objectReference: {fileID: 733418169}
     - target: {fileID: 5489166073731605099, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
       propertyPath: m_Speed
       value: 2
@@ -409553,7 +409576,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8002264680419333305, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
       insertIndex: 0
       addedObject: {fileID: 2078398501}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7149350620527048644, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cacc639bff9b6ae44887dc8b5e9186f3, type: 3}
 --- !u!1 &6382328034618819772
 GameObject:

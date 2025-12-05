@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -138,7 +138,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -162,8 +162,8 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            //要開槍
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _animator.SetTrigger("Fire");
             }
@@ -402,7 +402,7 @@ namespace StarterAssets
             Vector3 目標;
             Vector3 方向;
             目標 = GameObject.Find("Target").transform.position;
-            if(目標 != null)
+            if (目標 != null)
             {
                 Debug.Log("發射子彈");
                 方向 = (目標 - 發射點.position).normalized;
@@ -411,21 +411,7 @@ namespace StarterAssets
                 bb.GetComponent<Rigidbody>().linearVelocity = 方向 * Time.deltaTime * 100;
                 Destroy(bb, 3f);
             }
-            else
-            {
-                print("沒找到目標");
-            }
-
-            
-        }
-        public void startFiring()
-        {
-            Debug.Log("射擊開始");
         }
 
-        public void endFiring()
-        {
-            Debug.Log("射擊結束");
-        }
     }
 }

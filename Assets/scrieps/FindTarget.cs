@@ -1,64 +1,45 @@
 using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 
 public class FindTarget : MonoBehaviour
 {
-    public Transform 最近的敵人;
-    public Vector3 敵人座標;
-    public float 最近距離;
-    public GameObject 最終目標;
-
-    private void Start()
-    {
-        最終目標 = GameObject.Find("Target");
-    }
-
-
+    public float 最長距離 = 5f;
+    float 最短距離 = 10f;
+    GameObject 目標敵人 = null;
+    GameObject[] 所有敵人;
+    public GameObject 玩家;
+    public Vector3 原始瞄準點 = new Vector3(0, 1.625f, 1.825f);
     // Update is called once per frame
     void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (玩家 == null) 玩家 = GameObject.FindGameObjectWithTag("Player");
 
-        if (enemies.Length == 0)
+        所有敵人 = GameObject.FindGameObjectsWithTag("Enemy");
+        if (所有敵人.Length == 0)
         {
-            最近的敵人 = null;
-            敵人座標 = Vector3.zero;
-            最近距離 = 0f;
+            目標敵人 = null;
             return;
         }
-
-        float shortestDistance = float.MaxValue;
-        GameObject closestEnemy = null;
-
-        foreach(GameObject enemy in enemies)
+        目標敵人 = null;
+        最短距離 = 10f;
+        foreach (GameObject 敵人 in 所有敵人)
         {
-            float distance = Vector3.Distance(transform.position, enemy.transform.position);
-
-            if (distance < shortestDistance)
+            float 距離 = Vector3.Distance(玩家.transform.position, 敵人.transform.position);
+            if (距離 < 最短距離)
             {
-                shortestDistance = distance;
-                closestEnemy = enemy;
-            }
-            if (shortestDistance > 10f)
-            {
-                closestEnemy = null;
+                最短距離 = 距離;
+                目標敵人 = 敵人;
             }
         }
+        Vector3 瞄準位置 = 目標敵人.transform.position;
+        瞄準位置.y = 2f;
+        this.transform.position = 瞄準位置;
 
-        if (closestEnemy != null)
+        if (最短距離 > 最長距離)
         {
-            最近的敵人 = closestEnemy.transform;
-            // 設定目標座標
-            敵人座標 = closestEnemy.transform.position;
-            最近距離 = shortestDistance;
-            敵人座標.y = 1.4f;
-            最終目標.transform.position = 敵人座標;
+            目標敵人 = null;
+            this.transform.localPosition = 原始瞄準點;
         }
-        else
-        {
-            Vector3 原始座標 = new Vector3(0, 1.6f, 1.72f);
-            最終目標.transform.localPosition = 原始座標;
-        }
-
     }
 }
