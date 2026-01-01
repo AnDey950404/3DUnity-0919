@@ -24,6 +24,10 @@ public class npcgo : MonoBehaviour
         原始血量 = 血量;
         血量文字.text = 血量.ToString();
         導航.stoppingDistance = 攻擊距離;
+        if(目標 == null)
+        {
+            目標 = GameObject.FindWithTag("Player").transform;
+        }
     }
     void Update()
     {
