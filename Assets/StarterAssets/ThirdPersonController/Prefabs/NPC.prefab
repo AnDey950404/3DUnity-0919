@@ -1127,6 +1127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "\u767C\u5C04\u9EDE": {fileID: 0}
   "\u5B50\u5F48": {fileID: 0}
+  "\u5B50\u5F48\u901F\u5EA6": 100
+  "\u8840\u91CF\u6587\u5B57": {fileID: 0}
+  "\u8840\u91CF": 100
+  "\u8840\u689D": {fileID: 0}
+  "\u8840\u689D\u7D44\u4EF6": {fileID: 0}
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
